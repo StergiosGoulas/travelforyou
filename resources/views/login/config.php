@@ -1,12 +1,11 @@
 <?php
 $dbuser = "root";
 $dbpwd = "";
-$dbname = "travelforyou";
-
+$dbname = "travelAgency";
 
 try
 {
-	$pdo = new PDO('mysql:host=localhost;dbname=travelforyou',$dbuser,$dbpwd);
+	$pdo = new PDO('mysql:host=localhost;dbname=travelAgency',$dbuser,$dbpwd);
 	$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 }
 catch(PDOException $e)
