@@ -1,8 +1,3 @@
-<?php
-require_once("../logout/config.php");
-session_start();
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -15,14 +10,6 @@ session_start();
 </head>
 
 <body>
-
-	<?php
-	if (isset($_POST["create"])) {
-
-			$_SESSION["logged"] = false;
-	}
-	?>
-
 	<nav>
 		<div id="error" style="color:red"></div>
 		<div class="nav">
@@ -41,8 +28,11 @@ session_start();
 			<li class="nav-item">
 				<a aria-current="page" href="contact.php">Contact</a>
 			</li>
-			<li class="nav-item" style="margin-left:70%;">
-				<a aria-current="page" href="logout.php">Logout</a>
+			<li class="nav-item" style="margin-left:65%;">
+				<a aria-current="page" href="login.php">Login</a>
+			</li>
+			<li class="nav-item">
+				<a aria-current="page" href="register.php">Register</a>
 			</li>
 		</div>
 	</nav>

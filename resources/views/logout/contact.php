@@ -58,9 +58,9 @@
     <!-- footer -->
 
     <?php
-    require_once("../logout/footer.php");
-    session_start();
-    ?>
+        require_once("footer.php");
+        session_start();
+        ?>
 </body>
 
 </html>

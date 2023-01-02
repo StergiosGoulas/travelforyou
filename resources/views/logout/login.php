@@ -35,7 +35,7 @@ session_start();
     <div id="bodyimg">
 
         <?php
-        if (isset($_POST["create"])) { //create = button name
+        if (isset($_POST["create"])) {
         
             $stmt = $pdo->prepare("SELECT * FROM client WHERE email = ?");
             $stmt->execute([$_POST["email"]]);
@@ -43,7 +43,7 @@ session_start();
 
             if ($user && password_verify($_POST["password"], $user["password"])) {
                 $_SESSION["logged"] = true;
-                header("Location: logout/index.php");
+                header("Location: ../login/index.php");
                 exit;
             } else {
                 $_SESSION["error"] = "Wrong Email Or Password.Try again";

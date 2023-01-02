@@ -1,5 +1,5 @@
 <?php
-require_once("../logout/config.php");
+require_once("config.php");
 session_start();
 ?>
 
@@ -84,7 +84,7 @@ session_start();
                             <h4>Price: 399€ </h4>
 
                             <div class="d-flex justify-content-between stats">
-                            <button type="submit" name="test" class="button">Buy Package</button>
+                                <button type="submit" name="test" class="button">Buy Package</button>
                             </div>
                         </div>
                     </div>
@@ -103,7 +103,7 @@ session_start();
                             <h4>Price: 420€ </h4>
 
                             <div class="d-flex justify-content-between stats">
-                            <button type="submit" name="test" class="button">Buy Package</button>
+                                <button type="submit" name="test" class="button">Buy Package</button>
                             </div>
                         </div>
                     </div>
@@ -122,7 +122,7 @@ session_start();
                             <h4>Price: 510€ </h4>
 
                             <div class="d-flex justify-content-between stats">
-                            <button type="submit" name="test" class="button">Buy Package</button>
+                                <button type="submit" name="test" class="button">Buy Package</button>
                             </div>
                         </div>
                     </div>
@@ -148,7 +148,7 @@ session_start();
     <!-- footer -->
 
     <?php
-    require_once("../logout/footer.php");
+    require_once("footer.php");
     session_start();
     ?>
 </body>

@@ -42,7 +42,7 @@
     <!-- footer -->
 
     <?php
-    require_once("footer.php");
+    require_once("../logout/footer.php");
     session_start();
     ?>
 </body>

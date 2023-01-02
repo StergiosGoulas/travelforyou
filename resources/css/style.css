@@ -65,10 +65,15 @@ body {
 
 
 /* button */
-/* 
+
 .button {
-    color: white;
-    background-color: #2389cd;
+    background: #222;
+    border-radius: 0;
+    color:#fff;
+    cursor: pointer;
+    outline: none;
+    /* color: #fff;
+    background-color: #222;
     padding: 15px 32px;
     text-align: center;
     text-decoration: none;
@@ -76,13 +81,15 @@ body {
     font-size: 16px;
     margin: 4px 2px;
     cursor: pointer;
-    border-radius: 12px;
+    border-radius: 0;
     position: relative;
+    outline: none;
     left: 50%;
     margin-top: 10%;
-    margin-bottom: 2%;
+    margin-bottom: 2%; */
 }
 
 .button:hover {
     background-color: #2389cd;
-} */
+}
+
