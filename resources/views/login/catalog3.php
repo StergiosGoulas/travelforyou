@@ -1,5 +1,5 @@
 <?php
-require_once("config.php");
+require_once("../logout/config.php");
 session_start();
 ?>
 
@@ -40,17 +40,17 @@ session_start();
                 <div class="row mt-1">
                     <div class="col-md-3" id="athens">
                         <div class="p-card bg-white p-2 rounded px-3">
-                            <h5 class="mt-2"> Αθήνα </h5>
-                            <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1c/c0/98/c5/caption.jpg?w=700&h=-1&s=1&cx=960&cy=638&chk=v1_dd51d42e9a888a6b338f"
+                            <h5 class="mt-2"> Παρίσι </h5>
+                            <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/05/e4/4c/04/babylon-tours.jpg?w=500&h=400&s=1"
                                 alt="" width="225px" height="180px">
-                            <h6>PackageID: 1 </h6>
+                            <h6>PackageID: 9 </h6>
                             <h6>From: Ηράκλειο</h6>
-                            <h6>To: Αθήνα</h6>
-                            <h6>From Date: 10/03/2023</h6>
-                            <h6>To Date: 12/03/2023</h6>
+                            <h6>To: Παρίσι</h6>
+                            <h6>From Date: 08/09/2023</h6>
+                            <h6>To Date: 10/09/2023</h6>
                             <h6>Duration: 3</h6>
-                            <h6>Available Seats: 13</h6>
-                            <h4>Price: 149€ </h4>
+                            <h6>Available Seats: 10</h6>
+                            <h4>Price: 399€ </h4>
 
                             <?php
                             if (isset($_POST["test"])) {
@@ -71,58 +71,58 @@ session_start();
                     </div>
                     <div class="col-md-3">
                         <div class="p-card bg-white p-2 rounded px-3">
-                            <h5 class="mt-2"> Σαντορίνη </h5>
-                            <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1d/81/30/3f/caption.jpg?w=700&h=-1&s=1&cx=1846&cy=1833&chk=v1_6ae0a81ae3361e988707"
+                            <h5 class="mt-2"> Λονδίνο </h5>
+                            <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/18/97/17/9e/riverside-view-of-south.jpg?w=600&h=400&s=1"
                                 alt="" width="225px" height="180px">
-                            <h6>PackageID: 2 </h6>
+                            <h6>PackageID: 10 </h6>
                             <h6>From: Ηράκλειο</h6>
-                            <h6>To: Σαντορίνη</h6>
-                            <h6>From Date: 12/08/2023</h6>
-                            <h6>To Date: 15/08/2023</h6>
+                            <h6>To: Λονδίνο</h6>
+                            <h6>From Date: 16/10/2023</h6>
+                            <h6>To Date: 19/10/2023</h6>
                             <h6>Duration: 4</h6>
-                            <h6>Available Seats: 12</h6>
+                            <h6>Available Seats: 14</h6>
+                            <h4>Price: 449€ </h4>
+
+                            <div class="d-flex justify-content-between stats">
+                            <button type="submit" name="test" class="button">Buy Package</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="p-card bg-white p-2 rounded px-3">
+                            <h5 class="mt-2"> Μόναχο </h5>
+                            <img src="https://media-cdn.tripadvisor.com/media/photo-s/09/2e/88/54/marienplatz.jpg"
+                                alt="" width="225px" height="180px">
+                            <h6>PackageID: 11 </h6>
+                            <h6>From: Ηράκλειο</h6>
+                            <h6>To: Μόναχο</h6>
+                            <h6>From Date: 23/12/2023</h6>
+                            <h6>To Date: 26/12/2023</h6>
+                            <h6>Duration: 4</h6>
+                            <h6>Available Seats: 18</h6>
                             <h4>Price: 399€ </h4>
 
                             <div class="d-flex justify-content-between stats">
-                                <button type="submit" name="test" class="button">Buy Package</button>
+                            <button type="submit" name="test" class="button">Buy Package</button>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-3">
                         <div class="p-card bg-white p-2 rounded px-3">
-                            <h5 class="mt-2"> Ίος </h5>
-                            <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/08/69/ba/f7/mylopotas-beach.jpg?w=700&h=500&s=1"
+                            <h5 class="mt-3"> Ρώμη </h5>
+                            <img src="https://media-cdn.tripadvisor.com/media/photo-s/08/b5/76/1d/piazza-navona.jpg"
                                 alt="" width="225px" height="180px">
-                            <h6>PackageID: 3 </h6>
+                            <h6>PackageID: 12 </h6>
                             <h6>From: Ηράκλειο</h6>
-                            <h6>To: Ίος</h6>
-                            <h6>From Date: 05/06/2023</h6>
-                            <h6>To Date: 09/08/2023</h6>
+                            <h6>To: Ρώμη</h6>
+                            <h6>From Date: 02/07/2023</h6>
+                            <h6>To Date: 06/07/2023</h6>
                             <h6>Duration: 5</h6>
-                            <h6>Available Seats: 5</h6>
-                            <h4>Price: 419€ </h4>
+                            <h6>Available Seats: 6</h6>
+                            <h4>Price: 449€ </h4>
 
                             <div class="d-flex justify-content-between stats">
-                                <button type="submit" name="test" class="button">Buy Package</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="p-card bg-white p-2 rounded px-3">
-                            <h5 class="mt-3"> Μύκονος </h5>
-                            <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/15/33/f9/51/mykonos.jpg?w=700&h=500&s=1"
-                                alt="" width="225px" height="180px">
-                            <h6>PackageID: 4 </h6>
-                            <h6>From: Ηράκλειο</h6>
-                            <h6>To: Μύκονος</h6>
-                            <h6>From Date: 20/06/2023</h6>
-                            <h6>To Date: 23/06/2023</h6>
-                            <h6>Duration: 4</h6>
-                            <h6>Available Seats: 4</h6>
-                            <h4>Price: 519€ </h4>
-
-                            <div class="d-flex justify-content-between stats">
-                                <button type="submit" name="test" class="button">Buy Package</button>
+                            <button type="submit" name="test" class="button">Buy Package</button>
                             </div>
                         </div>
                     </div>
@@ -132,12 +132,12 @@ session_start();
             <div class="d-flex justify-content-end text-right mt-2">
                 <nav>
                     <ul class="pagination">
-                        <li class="page-item"><a class="page-link" href="#" aria-label="Previous"><span
+                        <li class="page-item"><a class="page-link" href="catalog2.php" aria-label="Previous"><span
                                     aria-hidden="true">«</span></a></li>
                         <li class="page-item"><a class="page-link" href="catalog.php">1</a></li>
                         <li class="page-item"><a class="page-link" href="catalog2.php">2</a></li>
                         <li class="page-item"><a class="page-link" href="catalog3.php">3</a></li>
-                        <li class="page-item"><a class="page-link" href="catalog2.php" aria-label="Next"><span
+                        <li class="page-item"><a class="page-link" href="#" aria-label="Next"><span
                                     aria-hidden="true">»</span></a></li>
                     </ul>
                 </nav>
@@ -148,7 +148,7 @@ session_start();
     <!-- footer -->
 
     <?php
-    require_once("footer.php");
+    require_once("../logout/footer.php");
     session_start();
     ?>
 </body>
