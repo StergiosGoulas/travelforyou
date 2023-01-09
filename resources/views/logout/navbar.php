@@ -23,12 +23,9 @@
 				<a aria-current="page" href="catalog.php">Travel Packages</a>
 			</li>
 			<li class="nav-item">
-				<a aria-current="page" href="orders.php">My orders</a>
-			</li>
-			<li class="nav-item">
 				<a aria-current="page" href="contact.php">Contact</a>
 			</li>
-			<li class="nav-item" style="margin-left:65%;">
+			<li class="nav-item" style="margin-left:71%;">
 				<a aria-current="page" href="login.php">Login</a>
 			</li>
 			<li class="nav-item">

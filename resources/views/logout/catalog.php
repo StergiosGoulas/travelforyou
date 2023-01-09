@@ -40,9 +40,11 @@ session_start();
                 <div class="row mt-1">
                     <div class="col-md-3" id="athens">
                         <div class="p-card bg-white p-2 rounded px-3">
+                        
                             <h5 class="mt-2"> Αθήνα </h5>
                             <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1c/c0/98/c5/caption.jpg?w=700&h=-1&s=1&cx=960&cy=638&chk=v1_dd51d42e9a888a6b338f"
                                 alt="" width="225px" height="180px">
+
                             <h6>PackageID: 1 </h6>
                             <h6>From: Ηράκλειο</h6>
                             <h6>To: Αθήνα</h6>
