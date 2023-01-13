@@ -36,21 +36,43 @@ session_start();
                     </div>
                 </div>
             </div>
+
             <form method="POST" action="catalog.php">
+                
+            <!-- ID = 1 -->
+
                 <div class="row mt-1">
                     <div class="col-md-3" id="athens">
                         <div class="p-card bg-white p-2 rounded px-3">
-                            <h5 class="mt-2"> Αθήνα </h5>
-                            <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1c/c0/98/c5/caption.jpg?w=700&h=-1&s=1&cx=960&cy=638&chk=v1_dd51d42e9a888a6b338f"
-                                alt="" width="225px" height="180px">
-                            <h6>PackageID: 1 </h6>
-                            <h6>From: Ηράκλειο</h6>
-                            <h6>To: Αθήνα</h6>
-                            <h6>From Date: 10/03/2023</h6>
-                            <h6>To Date: 12/03/2023</h6>
-                            <h6>Duration: 3</h6>
-                            <h6>Available Seats: 13</h6>
-                            <h4>Price: 110€ </h4>
+                            <?php
+                            $connection = mysqli_connect("localhost", "root", "", "travelAgency");
+
+                            $query = "SELECT * FROM entitytravelpackages WHERE packageid = 1";
+                            $result = mysqli_query($connection, $query);
+
+
+                            ?>
+                            <tr>
+                                <?php
+                                while ($row = mysqli_fetch_assoc($result)) {
+                                    ?>
+                                    <td>
+                                    <h5><?php echo $row['toCity'] ?></h5>
+                                        <img src="<?php echo $row['photoURL']; ?>" alt="" width="225px" height="180px" />
+                                        <h6>From: <?php echo $row['fromCity'] ?></h6>
+                                        <h6>To: <?php echo $row['toCity'] ?></h6>
+                                        <h6>From Date: <?php echo $row['fromDate'] ?></h6>
+                                        <h6>To Date: <?php echo $row['toDate'] ?></h6>
+                                        <h6>Duration: <?php echo $row['duration'] ?></h6>
+                                        <h6>Available Seats: <?php echo $row['availableSeats'] ?></h6>
+                                        <h4>Price: <?php echo $row['price'] ?>€ </h4>
+
+                                    </td>
+                                </tr>
+                            <?php
+                                }
+                                ?>
+
 
                             <?php
                             if (isset($_POST["test"])) {
@@ -64,71 +86,174 @@ session_start();
                             }
                             ?>
 
+
                             <div class="d-flex justify-content-between stats">
                                 <button type="submit" name="test" class="button">Buy Package</button>
                             </div>
                         </div>
                     </div>
+
+                                    <!-- ID = 2 -->
+
                     <div class="col-md-3">
                         <div class="p-card bg-white p-2 rounded px-3">
-                            <h5 class="mt-2"> Σαντορίνη </h5>
-                            <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1d/81/30/3f/caption.jpg?w=700&h=-1&s=1&cx=1846&cy=1833&chk=v1_6ae0a81ae3361e988707"
-                                alt="" width="225px" height="180px">
-                            <h6>PackageID: 2 </h6>
-                            <h6>From: Ηράκλειο</h6>
-                            <h6>To: Σαντορίνη</h6>
-                            <h6>From Date: 12/08/2023</h6>
-                            <h6>To Date: 15/08/2023</h6>
-                            <h6>Duration: 4</h6>
-                            <h6>Available Seats: 12</h6>
-                            <h4>Price: 399€ </h4>
+                            <?php
+                            $connection = mysqli_connect("localhost", "root", "", "travelAgency");
+
+                            $query = "SELECT * FROM entitytravelpackages WHERE packageid = 2";
+                            $result = mysqli_query($connection, $query);
+
+
+                            ?>
+                            <tr>
+                                <?php
+                                while ($row = mysqli_fetch_assoc($result)) {
+                                    ?>
+                                    <td>
+                                        <h5><?php echo $row['toCity'] ?></h5>
+                                        <img src="<?php echo $row['photoURL']; ?>" alt="" width="225px" height="180px" />
+                                        <h6>From: <?php echo $row['fromCity'] ?></h6>
+                                        <h6>To: <?php echo $row['toCity'] ?></h6>
+                                        <h6>From Date: <?php echo $row['fromDate'] ?></h6>
+                                        <h6>To Date: <?php echo $row['toDate'] ?></h6>
+                                        <h6>Duration: <?php echo $row['duration'] ?></h6>
+                                        <h6>Available Seats: <?php echo $row['availableSeats'] ?></h6>
+                                        <h4>Price: <?php echo $row['price'] ?>€ </h4>
+
+                                    </td>
+                                </tr>
+                            <?php
+                                }
+                                ?>
+
+
+                            <?php
+                            if (isset($_POST["test"])) {
+                                if (isset($_SESSION["logged"])) {
+                                    header("Location: orders.php");
+                                    exit;
+                                } else {
+                                    header('Location: login.php');
+                                    exit;
+                                }
+                            }
+                            ?>
+
 
                             <div class="d-flex justify-content-between stats">
-                            <button type="submit" name="test" class="button">Buy Package</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="p-card bg-white p-2 rounded px-3">
-                            <h5 class="mt-2"> Ίος </h5>
-                            <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/08/69/ba/f7/mylopotas-beach.jpg?w=700&h=500&s=1"
-                                alt="" width="225px" height="180px">
-                            <h6>PackageID: 3 </h6>
-                            <h6>From: Ηράκλειο</h6>
-                            <h6>To: Ίος</h6>
-                            <h6>From Date: 05/06/2023</h6>
-                            <h6>To Date: 09/08/2023</h6>
-                            <h6>Duration: 5</h6>
-                            <h6>Available Seats: 5</h6>
-                            <h4>Price: 420€ </h4>
-
-                            <div class="d-flex justify-content-between stats">
-                            <button type="submit" name="test" class="button">Buy Package</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="p-card bg-white p-2 rounded px-3">
-                            <h5 class="mt-3"> Μύκονος </h5>
-                            <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/15/33/f9/51/mykonos.jpg?w=700&h=500&s=1"
-                                alt="" width="225px" height="180px">
-                            <h6>PackageID: 4 </h6>
-                            <h6>From: Ηράκλειο</h6>
-                            <h6>To: Μύκονος</h6>
-                            <h6>From Date: 20/06/2023</h6>
-                            <h6>To Date: 23/06/2023</h6>
-                            <h6>Duration: 4</h6>
-                            <h6>Available Seats: 4</h6>
-                            <h4>Price: 510€ </h4>
-
-                            <div class="d-flex justify-content-between stats">
-                            <button type="submit" name="test" class="button">Buy Package</button>
+                                <button type="submit" name="test" class="button">Buy Package</button>
                             </div>
                         </div>
                     </div>
 
+                                    <!-- ID = 3 -->
+
+                    <div class="col-md-3">
+                        <div class="p-card bg-white p-2 rounded px-3">
+                            <?php
+                            $connection = mysqli_connect("localhost", "root", "", "travelAgency");
+
+                            $query = "SELECT * FROM entitytravelpackages WHERE packageid = 3";
+                            $result = mysqli_query($connection, $query);
+
+
+                            ?>
+                            <tr>
+                                <?php
+                                while ($row = mysqli_fetch_assoc($result)) {
+                                    ?>
+                                    <td>
+                                        <h5><?php echo $row['toCity'] ?></h5>
+                                        <img src="<?php echo $row['photoURL']; ?>" alt="" width="225px" height="180px" />
+                                        <h6>From: <?php echo $row['fromCity'] ?></h6>
+                                        <h6>To: <?php echo $row['toCity'] ?></h6>
+                                        <h6>From Date: <?php echo $row['fromDate'] ?></h6>
+                                        <h6>To Date: <?php echo $row['toDate'] ?></h6>
+                                        <h6>Duration: <?php echo $row['duration'] ?></h6>
+                                        <h6>Available Seats: <?php echo $row['availableSeats'] ?></h6>
+                                        <h4>Price: <?php echo $row['price'] ?>€ </h4>
+
+                                    </td>
+                                </tr>
+                            <?php
+                                }
+                                ?>
+
+
+                            <?php
+                            if (isset($_POST["test"])) {
+                                if (isset($_SESSION["logged"])) {
+                                    header("Location: orders.php");
+                                    exit;
+                                } else {
+                                    header('Location: login.php');
+                                    exit;
+                                }
+                            }
+                            ?>
+
+
+                            <div class="d-flex justify-content-between stats">
+                                <button type="submit" name="test" class="button">Buy Package</button>
+                            </div>
+                        </div>
+                    </div>
+
+                                    <!-- ID = 4 -->
+
+                                    <div class="col-md-3">
+                        <div class="p-card bg-white p-2 rounded px-3">
+                            <?php
+                            $connection = mysqli_connect("localhost", "root", "", "travelAgency");
+
+                            $query = "SELECT * FROM entitytravelpackages WHERE packageid = 4";
+                            $result = mysqli_query($connection, $query);
+
+
+                            ?>
+                            <tr>
+                                <?php
+                                while ($row = mysqli_fetch_assoc($result)) {
+                                    ?>
+                                    <td>
+                                        <h5><?php echo $row['toCity'] ?></h5>
+                                        <img src="<?php echo $row['photoURL']; ?>" alt="" width="225px" height="180px" />
+                                        <h6>From: <?php echo $row['fromCity'] ?></h6>
+                                        <h6>To: <?php echo $row['toCity'] ?></h6>
+                                        <h6>From Date: <?php echo $row['fromDate'] ?></h6>
+                                        <h6>To Date: <?php echo $row['toDate'] ?></h6>
+                                        <h6>Duration: <?php echo $row['duration'] ?></h6>
+                                        <h6>Available Seats: <?php echo $row['availableSeats'] ?></h6>
+                                        <h4>Price: <?php echo $row['price'] ?>€ </h4>
+
+                                    </td>
+                                </tr>
+                            <?php
+                                }
+                                ?>
+
+
+                            <?php
+                            if (isset($_POST["test"])) {
+                                if (isset($_SESSION["logged"])) {
+                                    header("Location: orders.php");
+                                    exit;
+                                } else {
+                                    header('Location: login.php');
+                                    exit;
+                                }
+                            }
+                            ?>
+
+
+                            <div class="d-flex justify-content-between stats">
+                                <button type="submit" name="test" class="button">Buy Package</button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </form>
+
             <div class="d-flex justify-content-end text-right mt-2">
                 <nav>
                     <ul class="pagination">

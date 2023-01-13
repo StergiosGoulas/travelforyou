@@ -17,33 +17,28 @@ session_start();
 
 <body>
     <div>
-
-
-
-
         <div>
-
             <?php
             $connection = mysqli_connect("localhost", "root", "", "travelAgency");
 
             $query = "SELECT * FROM entitytravelpackages ORDER BY packageid;";
             $result = mysqli_query($connection, $query);
-            
+
 
             ?>
             <!-- <h5 class="mt-2"> Αθήνα </h5> -->
-<tr>
-    <?php
-        while($row = mysqli_fetch_assoc($result)){
+            <tr>
+                <?php
+                while ($row = mysqli_fetch_assoc($result)) {
+                    ?>
+                    <td>
+                        <?php echo $row['availableSeats'] ?>
+                    </td>
+                    <img src="<?php echo $row['photoURL']; ?>" />
+                </tr>
+            <?php
+                }
             ?>
-            <td><?php echo $row['availableSeats'] ?></td>
-            <img src="<?php echo $row['photoURL']; ?>" />
-</tr>
-    <?php
-        }
-    ?>
-
-
 
         </div>
     </div>

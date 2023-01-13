@@ -49,7 +49,7 @@ session_start();
 				$email = $_POST["email"];
 				$password = $_POST["password"];
 
-				$hash = password_hash($password, PASSWORD_DEFAULT); // prosoxh to varchar sthn vash na einai megalos ari8mos
+				$hash = password_hash($password, PASSWORD_DEFAULT);
 			
 
 				$stmt = $pdo->prepare("SELECT * FROM client WHERE email =?");
